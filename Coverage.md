@@ -4,7 +4,7 @@
 
 ### .type
 
-The type of the coverage, more specifically of its domain as a string. One of `Grid`, `Profile`, ...
+The type of the coverage, more specifically of its domain, as a string. One of `Grid`, `Profile`, ...
 
 ### .bbox
 
@@ -38,7 +38,7 @@ cov.loadDomain()
 
 ```js
 cov.loadDomain().then(function(domain) {
-  console.log(domain.TODO)
+  console.log(domain.type) // "Grid", "Profile", ...
 })
 ```
 
