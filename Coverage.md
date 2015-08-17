@@ -20,9 +20,27 @@ The time period which this Coverage covers as an array `[start, end]` of [`Date`
 
 ### .parameters
 
-A [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map) from key to `Parameter` object. The key is a short alias of a Parameter, typically what is called a "variable name" or similar.
+A [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map) from key to [`Parameter`](Parameter.md) object. The key is a short alias of a Parameter, typically what is called a "variable name" or similar.
 
 ## Coverage methods
+
+### .loadDomain()
+
+The `loadDomain()` method returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which loads the domain data and provides a [`Domain`](Domain.md) object in its callback.
+
+#### Syntax
+
+```js
+cov.loadDomain()
+```
+
+#### Examples
+
+```js
+cov.loadDomain().then(function(domain) {
+  console.log(domain.TODO)
+})
+```
 
 ### .loadRange()
 
