@@ -4,4 +4,4 @@
 
 ### .values
 
-An array of numbers and nulls, ordered as defined by the domain.
+An array of numbers and `undefined`, ordered as defined by the domain.
