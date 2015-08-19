@@ -1,24 +1,16 @@
 # Domain objects
 
+Domain objects describe the coordinates and their ordering in a domain.
+As part of this API, no standard domain types are defined.
+
 ## Domain properties
 
 ### .type
 
-An identifier for the type of domain: one of "Grid", "Profile", ...
+A URI as identifier for the type of domain, e.g. "http://coveragejson.org/def/domains/Grid".
+The type uniquely defines the .shape property elements, semantics of all axes, and further properties.
 
 ### .shape
 
 The number of elements in each domain dimension given as an array of integers.
 This is identical to the array shapes of all ranges.
-
-## Domain methods
-
-### .foo()
-
-
-#### Syntax
-
-#### Parameters
-
-#### Examples
-
