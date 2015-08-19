@@ -4,4 +4,4 @@
 
 ### .values
 
-An array of numbers and `undefined`, ordered as defined by the domain.
+An `[NdArray](NdArray.md)` object with shape and element ordering as defined by the domain.
