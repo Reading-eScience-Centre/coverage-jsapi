@@ -8,7 +8,7 @@ As part of this API, no common domain types are defined.
 ### .type
 
 A URI as identifier for the type of domain, e.g. "http://coveragejson.org/def/domains/Grid".
-The type uniquely defines the .shape property elements, semantics of all axes, and further properties.
+The type uniquely defines the .shape property array elements, semantics of all axes, and further properties.
 
 ### .shape
 
