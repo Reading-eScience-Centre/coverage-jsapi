@@ -1,7 +1,7 @@
 # Domain objects
 
 Domain objects describe the coordinates and their ordering in a domain.
-As part of this API, no standard domain types are defined.
+As part of this API, no common domain types are defined.
 
 ## Domain properties
 
