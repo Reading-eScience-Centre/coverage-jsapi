@@ -28,12 +28,6 @@ A [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_
 
 The `loadDomain()` method returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which loads the domain data and provides a [`Domain`](Domain.md) object in its callback.
 
-#### Syntax
-
-```js
-cov.loadDomain()
-```
-
 #### Examples
 
 ```js
@@ -42,15 +36,9 @@ cov.loadDomain().then(function(domain) {
 })
 ```
 
-### .loadRange()
+### .loadRange(paramKey)
 
-The `loadRange()` method returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which loads the requested range data and provides a [`Range`](Range.md) object in its callback.
-
-#### Syntax
-
-```js
-cov.loadRange(paramKey)
-```
+The `loadRange` method returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which loads the requested range data and provides a [`Range`](Range.md) object in its callback.
 
 #### Parameters
 
