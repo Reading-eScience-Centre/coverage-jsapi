@@ -32,7 +32,7 @@ The `loadDomain()` method returns a [`Promise`](https://developer.mozilla.org/de
 
 ```js
 cov.loadDomain().then(function(domain) {
-  console.log(domain.type) // "Grid", "Profile", ...
+  console.log(domain.type) // "http://coveragejson.org/def#Grid"
 })
 ```
 
