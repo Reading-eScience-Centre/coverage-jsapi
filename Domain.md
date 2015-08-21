@@ -8,7 +8,7 @@ This allows for Coverage formats and implementations to evolve naturally and pre
 
 ### .type
 
-A URI as identifier for the type of domain, e.g. "http://coveragejson.org/def#Grid".
+A URI as identifier for the type of domain, e.g. "http://coveragejson.org/def#Grid", identical to the [`Coverage.type`](Coverage.md) property.
 The type uniquely defines the .shape property array elements, semantics of all axes, and further properties.
 
 ### .shape
