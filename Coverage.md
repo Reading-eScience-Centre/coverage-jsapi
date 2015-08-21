@@ -4,7 +4,11 @@
 
 ### .type
 
-The domain type of the coverage given as a URI, e.g. http://coveragejson.org/def#Profile. The domain type is typically enough to choose an appropriate implementation for rendering without loading any domain data. Since parameter and range data is standardized, the domain type is enough to check whether an implementation can support it.
+The coverage type is a URI that describes which concept the coverage represents, e.g. http://www.topografix.com/GPX#Track. It may be used by implementations to choose a more appropriate visualization than by just simply looking at the domain type (e.g. http://coveragejson.org/def#Trajectory)
+
+### .domainType
+
+The domain type of the coverage given as a URI, e.g. http://coveragejson.org/def#Profile. The domain type is typically enough to choose a (possibly generic) implementation for visualization/processing. This property is identical to the [`Domain.type`](Domain.md) property. It allows to make early decisions without actually loading the domain with `.loadDomain()`.
 
 ### .bbox
 
