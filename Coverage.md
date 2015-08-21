@@ -4,9 +4,7 @@
 
 ### .type
 
-**TODO** as in Domain this should probably also be a URI, but maybe more generic in terms of a concept, whereas the URI in Domain defines exactly how the coordinates are structured and which properties exist, so this may be in the sense of a common authority like http://coverages.org/def/types/Profile and it could give a first hint to libraries on what to expect without looking at/loading the domain data
-
-The type of the coverage, more specifically of its domain, as a string. One of `Grid`, `Profile`, ...
+The type of the coverage given as a URI, e.g. http://coveragejson.org/def#ProfileCoverage. It corresponds to the domain type and is suitable for choosing an appropriate implementation for rendering without loading domain data.
 
 ### .bbox
 
