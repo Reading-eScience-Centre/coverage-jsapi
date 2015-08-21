@@ -6,6 +6,10 @@
 
 A short alias of the Parameter, identical to the one used as key in [`Coverage.parameters`](Coverage.md#parameters).
 
+### .dtype
+
+The data type of the range values: `"number"`, `"string"`, or `"boolean"`. Note that missing values are always represented as `null`.
+
 ### .description
 
 A textual, perhaps lengthy, description of the parameter.
