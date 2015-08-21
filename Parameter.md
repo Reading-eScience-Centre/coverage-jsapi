@@ -8,7 +8,7 @@ A short alias of the Parameter, identical to the one used as key in [`Coverage.p
 
 ### .dtype
 
-The data type of the range values: `"number"`, `"string"`, or `"boolean"`. Note that missing values are always represented as `null`.
+The data type of the range values: `"number"` or `"string"`. Note that missing values are always represented as `null`. Boolean values should be represented as numbers together with the `.categories` property.
 
 ### .description
 
