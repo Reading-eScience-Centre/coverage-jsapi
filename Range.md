@@ -14,4 +14,4 @@ If defined, any number in .values is equal or greater than .validMin.
 
 If defined, any number in .values is equal or lower than .validMax.
 
-Note that either none or both validMin/validMax are defined.
+If .values has only missing values, then .validMin and .validMax are not defined, otherwise both exist.
