@@ -10,7 +10,7 @@ The array shape as an array of integers.
 
 ### .get(i,j,...)
 
-Returns the element `i,j,...` from the array, which is either a number or `undefined` (for missing data).
+Returns the element `i,j,...` from the array, which is either a number, string, boolean, or `null` (for missing data). The value type is the same for all elements and is equal to the associated [`Parameter`](Parameter.md)'s dtype property.
 
 #### Parameters
 
