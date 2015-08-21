@@ -4,7 +4,7 @@
 
 ### .type
 
-The type of the coverage given as a URI, e.g. http://coveragejson.org/def#ProfileCoverage. It corresponds to the domain type and is suitable for choosing an appropriate implementation for rendering without loading domain data.
+The domain type of the coverage given as a URI, e.g. http://coveragejson.org/def#Profile. The domain type is typically enough to choose an appropriate implementation for rendering without loading any domain data. Since parameter and range data is standardized, the domain type is enough to check whether an implementation can support it.
 
 ### .bbox
 
