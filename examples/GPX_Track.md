@@ -17,7 +17,7 @@ as a Coverage.
 ## Mapping specifics
 
 A track corresponds to what we call "Trajectory" Domain. 
-Each of the track point extension types (like heart rate) is a Parameter.
-The set of values for one extension type is then a Range.
+Each of the additional track point value types (like heart rate) is a Parameter.
+The set of values for one type is then a Range.
 
 TODO add more details
