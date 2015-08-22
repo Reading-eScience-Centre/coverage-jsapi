@@ -16,7 +16,7 @@ as a Coverage.
 
 ## Mapping specifics
 
-A track corresponds to what we call "Trajectory" Domain. 
+A track is a Coverage with domain type "Trajectory". 
 Each of the additional track point value types (like heart rate) is a Parameter.
 The set of values for one type is then a Range.
 
