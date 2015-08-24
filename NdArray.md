@@ -26,7 +26,7 @@ var val = arr.get(0,100,50)
 
 ### .lo(i,j,...)
 
-Returns a subsetted NdArray of this array with each dimension starting at the given indices.
+Returns a subsetted NdArray view of this array with each dimension starting at the given indices.
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Returns a subsetted NdArray of this array with each dimension starting at the gi
 
 ### .hi(i,j,...)
 
-Returns a subsetted NdArray of this array with each dimension ending before the given indices.
+Returns a subsetted NdArray view of this array with each dimension ending before the given indices.
 
 #### Parameters
 
