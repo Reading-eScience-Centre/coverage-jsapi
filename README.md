@@ -1,6 +1,6 @@
 # JavaScript API for [Coverage](https://en.wikipedia.org/wiki/Coverage_data) objects
 
-A JavaScript API for handling arbitrary coverage data. The API is based on the object structure of [CoverageJSON](https://github.com/neothemachine/coveragejson) but abstracts over it to make it exchangeable. It's purpose is to serve as a common interface that libraries can implement and depend on.
+A JavaScript API for handling arbitrary coverage data. The API is based on the object structure of [CoverageJSON](https://github.com/neothemachine/coveragejson) but abstracts over it to make it exchangeable. It's purpose is to serve as a common interface that libraries can implement and depend on. It is a work-in-progress and the API is likely to change in some areas.
 
 Start here: [`Coverage` objects](Coverage.md)
 
