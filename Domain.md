@@ -8,10 +8,14 @@ This allows for Coverage formats and implementations to evolve naturally and pre
 
 ### .type
 
-A URI as identifier for the type of domain, e.g. "http://coveragejson.org/def#Grid", identical to the [`Coverage.type`](Coverage.md) property.
-The type uniquely defines the .shape property, semantics of all axes, and further properties.
+A URI as identifier for the type of domain, e.g. "http://coveragejson.org/def#Grid", identical to the [`Coverage.domainType`](Coverage.md) property.
 
 ### .shape
 
 The number of elements in each domain dimension given as an array of integers.
 This is identical to the array shapes of all ranges.
+
+### .names
+
+The name of each axis given as an array of strings.
+See also [`Coverage.subsetByIndex`](Coverage.md).
