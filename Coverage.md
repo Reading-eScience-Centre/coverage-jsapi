@@ -57,3 +57,18 @@ cov.loadRange(paramKey).then(function(range) {
   console.log(range.values)
 })
 ```
+
+## subsetByIndex(constraints)
+
+If defined, returns a copy of this [`Coverage`](Coverage.md) object with the domain subsetted by indices. If this function is not defined, then this operation is not supported. The coverage and/or domain type may be different than in the original coverage.
+
+### Parameters
+
+`constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be an integer, an array of integers, or an object with `start`, `stop`, and optionally `step` (defaults to 1) properties whose values are integers. All integers must be non-negative, `step` must not be zero. A simple integer constrains the axis to the given index, an array to a list of indices, and a start/stop/step object to a range of indices: If `step=1`, this includes all indices starting at `start` and ending at `stop` (exclusive); if `step>1`, all indices `start, start + step, ..., start + (q + r - 1) step` where `q` and `r` are the quotient and remainder obtained by dividing `stop - start` by `step`.
+
+### Example
+
+```js
+var subsetCov = cov.subsetByIndex({t: 4, z: {start: 10, stop: 20}, x: [0,1,2] })
+console.log(subsetCov.bbox)
+```
