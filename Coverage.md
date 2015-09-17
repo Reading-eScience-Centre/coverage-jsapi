@@ -60,7 +60,7 @@ cov.loadRange(paramKey).then(function(range) {
 
 ## subsetByIndex(constraints)
 
-If defined, returns a copy of this [`Coverage`](Coverage.md) object with the domain subsetted by indices. If this function is not defined, then this operation is not supported. The coverage and/or domain type may be different than in the original coverage.
+If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which provides a copy of this [`Coverage`](Coverage.md) object with the domain subsetted by indices. If this function is not defined, then this operation is not supported. The coverage and/or domain type may be different than in the original coverage.
 
 ### Parameters
 
@@ -69,6 +69,7 @@ If defined, returns a copy of this [`Coverage`](Coverage.md) object with the dom
 ### Example
 
 ```js
-var subsetCov = cov.subsetByIndex({t: 4, z: {start: 10, stop: 20}, x: [0,1,2] })
-console.log(subsetCov.bbox)
+cov.subsetByIndex({t: 4, z: {start: 10, stop: 20}, x: [0,1,2] }).then(function(subsetCov) {
+    console.log(subsetCov.bbox)
+}
 ```
