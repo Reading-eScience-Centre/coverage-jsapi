@@ -12,7 +12,7 @@ The domain type of the coverage given as a URI, e.g. http://coveragejson.org/def
 
 ### .bbox
 
-A geographical (WGS84) 2D bounding box of the coverage as an array `[westLon, southLat, eastLon, northLat]` with values in degrees.
+If defined, a geographical (WGS84) 2D bounding box of the coverage as an array `[westLon, southLat, eastLon, northLat]` with values in degrees.
 
 ### .timeExtent
 
