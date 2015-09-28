@@ -58,6 +58,38 @@ cov.loadRange(paramKey).then(function(range) {
 })
 ```
 
+### .loadRanges([paramKeys])
+
+The `loadRanges` method returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which loads all or the requested range data and provides a [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map) of [`Range`](Range.md) objects in its callback with the map keys being the parameter keys.
+
+#### Parameters
+
+`paramKeys` - An iterable of parameter keys for which to load the range data. If not given, loads all range data.
+
+#### Examples
+
+```js
+cov.loadRanges().then(function(ranges) {
+  console.log(ranges.get('salinity').values)
+})
+```
+
+#### Reference implementation (ES6 syntax)
+
+```js
+function loadRanges (keys) {
+  if (keys === undefined) keys = this.parameters.keys()
+  keys = Array.from(keys)
+  return Promise.all(keys.map(this.loadRange)).then(ranges => {
+    let map = new Map()
+    for (let i=0; i < keys.length; i++) {
+      map.set(keys[i], ranges[i])
+    }
+    return map
+  })
+}
+```
+
 ## subsetByIndex(constraints)
 
 If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which provides a copy of this [`Coverage`](Coverage.md) object with the domain subsetted by indices. If this function is not defined, then this operation is not supported. The coverage and/or domain type may be different than in the original coverage.
