@@ -6,7 +6,8 @@ Start here: [`Coverage` objects](Coverage.md)
 
 ## Implementations
 
-- [covjson-reader](https://github.com/Reading-eScience-Centre/covjson-reader) - JavaScript library that reads CoverageJSON documents, exposing the data as [`Coverage` objects](Coverage.md)
+- [covjson-reader](https://github.com/Reading-eScience-Centre/covjson-reader) - Library that reads CoverageJSON documents, exposing the data as [`Coverage` objects](Coverage.md)
+- [leaflet-coverage](https://github.com/Reading-eScience-Centre/leaflet-coverage) - [Leaflet](http://leafletjs.com/) plugin that visualizes [`Coverage` objects](Coverage.md) on a map
 
 ## Acknowledgments
 
