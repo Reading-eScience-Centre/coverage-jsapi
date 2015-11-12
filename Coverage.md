@@ -2,6 +2,10 @@
 
 ## Coverage properties
 
+### .id
+
+An optionally defined URI that serves as common identifier for this coverage.
+
 ### .type
 
 The coverage type is a URI that describes which concept the coverage represents, e.g. http://www.topografix.com/GPX#Track. It may be used by implementations to choose a more appropriate visualization than by just simply looking at the domain type (e.g. http://coveragejson.org/def#Trajectory)
