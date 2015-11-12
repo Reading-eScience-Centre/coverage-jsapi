@@ -12,14 +12,17 @@ A [`LanguageMap`](LanguageMap.md) object with a textual, perhaps lengthy, descri
 
 ### .observedProperty
 
-An object with the properties `label` and optionally `id` and `description`. `label` is a [`LanguageMap`](LanguageMap.md) object with a short name of the observed property. If given, `id` is a URI that defines the property, and `description` is a [`LanguageMap`](LanguageMap.md) object with a, perhaps lengthy, textual description.
+An [`ObservedProperty`](ObservedProperty.md) object.
 
 ### .unit
 
 An optionally defined object with the properties `symbol` and optionally `label`. `symbol` is a string, while `label` is a [`LanguageMap`](LanguageMap.md) object. If the `unit` property is not defined, then the parameter values are unitless. An example for `symbol` is "°C", and for `label` "en"->"Degrees Celsius".
 
-### .categories
+### .categoryMapping
 
-An optionally defined non-empty array of category objects. A category object has the `label` and `values` properties and may have `description` and `id` properties. The value of `label` is a [`LanguageMap`](LanguageMap.md) object with a short name of the category. The value of `values` is an array of integers where each integer is unique within all category objects in `categories`. If given, the value of `id` is a URI and serves as common identifier. If given, the value of `description` is a [`LanguageMap`](LanguageMap.md) object with a textual description of the category.
+An optionally defined [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map)
+object where each key is a [`Category`](ObservedProperty.md) ID, and each value an array of integers where each integer is unique within this map.
+This property is used to relate categories encoded as numbers in coverage [range values](Range.md) to their actual [`Category`](ObservedProperty.md).
 
-Note that a parameter object cannot have both `unit` and `categories` properties.
+
+Note that a parameter object cannot have both `unit` and `observedProperty.categories`/`categoryMapping` properties.
