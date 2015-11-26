@@ -22,10 +22,6 @@ If defined, a geographical (WGS84) 2D bounding box of the coverage as an array `
 
 The time period which this Coverage covers as an array `[start, end]` of [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) objects.
 
-### .verticalExtent
-
-... as always, tricky
-
 ### .parameters
 
 A [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map) from key to [`Parameter`](Parameter.md) object. The key is a short alias of a Parameter, typically what is called a "variable name" or similar.
@@ -34,7 +30,7 @@ A [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_
 
 ### .loadDomain()
 
-The `loadDomain()` method returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which loads the domain data and provides a [`Domain`](Domain.md) object in its callback.
+The `loadDomain()` method returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which succeeds with a [`Domain`](Domain.md) object. Note that this method may load remote data.
 
 #### Examples
 
@@ -46,7 +42,7 @@ cov.loadDomain().then(function(domain) {
 
 ### .loadRange(paramKey)
 
-The `loadRange` method returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which loads the requested range data and provides a [`Range`](Range.md) object in its callback.
+The `loadRange` method returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which succeeds with a [`Range`](Range.md) object that corresponds to the given parameter key. Note that this method may load remote data.
 
 #### Parameters
 
@@ -64,7 +60,7 @@ cov.loadRange(paramKey).then(function(range) {
 
 ### .loadRanges([paramKeys])
 
-The `loadRanges` method returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which loads all or the requested range data and provides a [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map) of [`Range`](Range.md) objects in its callback with the map keys being the parameter keys.
+The `loadRanges` method returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which succeeds with a [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map) object where a key is one of the parameter keys and a value is a [`Range`](Range.md) object.
 
 #### Parameters
 
@@ -96,7 +92,7 @@ function loadRanges (keys) {
 
 ## subsetByIndex(constraints)
 
-If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which provides a copy of this [`Coverage`](Coverage.md) object with the domain subsetted by indices. If this function is not defined, then this operation is not supported. The coverage and/or domain type may be different than in the original coverage.
+If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object succeeding with a copy of this [`Coverage`](Coverage.md) object with the domain subsetted by indices. If this function is not defined, then this operation is not supported. The coverage and/or domain type may be different than in the original coverage.
 
 ### Parameters
 
