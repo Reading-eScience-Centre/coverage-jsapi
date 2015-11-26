@@ -18,4 +18,4 @@ This is identical to the array shapes of all ranges.
 ### .names
 
 The name of each axis given as an array of strings.
-See also [`Coverage.subsetByIndex`](Coverage.md).
+See also [`Coverage.subsetByIndex`](Coverage.md#subsetbyindexconstraints).
