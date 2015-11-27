@@ -2,7 +2,7 @@
 
 ## Range properties
 
-### .size
+### .shape
 
 A [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map) with axis name as key and axis size as value. Identical to axis size information in [`Domain.axes`](Domain.md).
 
