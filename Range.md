@@ -29,6 +29,7 @@ Returns a range value of type `.dataType` or `null` for the given axis indices.
 #### Parameters
 
 `obj` - An object where each key is an axis name and each value an axis value index.
+        Missing axis indices are defaulted to 0.
 
 #### Examples
 
