@@ -16,7 +16,7 @@ The domain type of the coverage given as a URI, e.g. http://coveragejson.org/def
 
 ### .bbox
 
-If defined, a geographical (WGS84) 2D bounding box of the coverage as an array `[westLon, southLat, eastLon, northLat]` with values in degrees.
+If defined, an object with members `"box"` and `"srs"` where `"box"` is an array of four coordinates `[minx,miny,maxx,maxy]` describing the horizontal bounding box of the coverage and `"srs"` is a URI of the spatial coordinate reference system used for the coordinates. The value of `"srs"` will in most cases be `http://www.opengis.net/def/crs/OGC/1.3/CRS84`.
 
 ### .timeExtent
 
