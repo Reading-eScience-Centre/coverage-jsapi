@@ -102,7 +102,7 @@ If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/Java
 
 ```js
 cov.subsetByIndex({t: 4, z: {start: 10, stop: 20} }).then(function(subsetCov) {
-    console.log(subsetCov.bbox)
+    // work with subsetted coverage
 }
 ```
 
@@ -118,6 +118,14 @@ If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/Java
 
 ```js
 cov.subsetByValue({t: '2015-01-01T01:00:00', z: {start: -10, stop: -5} }).then(function(subsetCov) {
-    console.log(subsetCov.bbox)
+    // work with subsetted coverage
+}
+```
+
+### Example
+
+```js
+cov.subsetByValue({z: {target: -10} }).then(function(subsetCov) {
+    // work with subsetted coverage
 }
 ```
