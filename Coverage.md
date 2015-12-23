@@ -92,16 +92,32 @@ function loadRanges (keys) {
 
 ## subsetByIndex(constraints)
 
-If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object succeeding with a copy of this [`Coverage`](Coverage.md) object with the domain subsetted by indices. If this function is not defined, then this operation is not supported. The coverage and/or domain type may be different than in the original coverage.
+If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object succeeding with a copy of this [`Coverage`](Coverage.md) object with the domain subsetted in index space. If this function is not defined, then this operation is not supported. The coverage and/or domain type may be different than in the original coverage.
 
 ### Parameters
 
-`constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be an integer, an array of integers, or an object with `start`, `stop`, and optionally `step` (defaults to 1) properties whose values are integers. Properties that have the values `undefined` or `null` are ignored. All integers must be non-negative, `step` must not be zero. A simple integer constrains the axis to the given index, an array to a list of indices, and a start/stop/step object to a range of indices: If `step=1`, this includes all indices starting at `start` and ending at `stop` (exclusive); if `step>1`, all indices `start, start + step, ..., start + (q + r - 1) step` where `q` and `r` are the quotient and remainder obtained by dividing `stop - start` by `step`.
+`constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be an integer, or an object with `start`, `stop`, and optionally `step` (defaults to 1) properties whose values are integers. Properties that have the values `undefined` or `null` are ignored. All integers must be non-negative, `step` must not be zero. An integer constrains the axis to the given index, a start/stop/step object to a range of indices: If `step=1`, this includes all indices starting at `start` and ending at `stop` (exclusive); if `step>1`, all indices `start, start + step, ..., start + (q + r - 1) step` where `q` and `r` are the quotient and remainder obtained by dividing `stop - start` by `step`.
 
 ### Example
 
 ```js
-cov.subsetByIndex({t: 4, z: {start: 10, stop: 20}, x: [0,1,2] }).then(function(subsetCov) {
+cov.subsetByIndex({t: 4, z: {start: 10, stop: 20} }).then(function(subsetCov) {
+    console.log(subsetCov.bbox)
+}
+```
+
+## subsetByValue(constraints)
+
+If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object succeeding with a copy of this [`Coverage`](Coverage.md) object with the domain subsetted in value space. If this function is not defined, then this operation is not supported. The coverage and/or domain type may be different than in the original coverage. Subsetting in value space is only supported for non-composite axes.
+
+### Parameters
+
+`constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be a number or string, or, if the axis has an ordering relation, an object with `start` and `stop` properties whose values are numbers or strings, or an object with a `target` property whose value is a number or string. Properties that have the values `undefined` or `null` are ignored. A number or string constrains the axis to exactly the given value, a start/stop object to the values intersecting the extent.
+
+### Example
+
+```js
+cov.subsetByValue({t: '2015-01-01T01:00:00', z: {start: -10, stop: -5} }).then(function(subsetCov) {
     console.log(subsetCov.bbox)
 }
 ```
