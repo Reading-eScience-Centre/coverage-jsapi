@@ -18,7 +18,7 @@ query.filter({
 
 Subset coverages by domain values.
 
-Equivalent to calling [`Coverage.subsetByValue(constraints)`](Domain.md) on each coverage in the collection.
+Equivalent to calling [`Coverage.subsetByValue(constraints)`](Coverage.md) on each coverage in the collection.
 
 ### .embed(constraints)
 
