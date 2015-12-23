@@ -96,7 +96,7 @@ If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/Java
 
 ### Parameters
 
-`constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be an integer, or an object with `start`, `stop`, and optionally `step` (defaults to 1) properties whose values are integers. Properties that have the values `undefined` or `null` are ignored. All integers must be non-negative, `step` must not be zero. An integer constrains the axis to the given index, a start/stop/step object to a range of indices: If `step=1`, this includes all indices starting at `start` and ending at `stop` (exclusive); if `step>1`, all indices `start, start + step, ..., start + (q + r - 1) step` where `q` and `r` are the quotient and remainder obtained by dividing `stop - start` by `step`.
+`constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be an integer, or an object with `start`, `stop`, and optionally `step` (defaults to 1) properties whose values are integers. Properties that have the values `undefined` or `null` are ignored. All integers must be non-negative, `step` must not be zero. An integer constrains the axis to the given index, a `start`/`stop`/`step` object to a range of indices: If `step=1`, this includes all indices starting at `start` and ending at `stop` (exclusive); if `step>1`, all indices `start, start + step, ..., start + (q + r - 1) step` where `q` and `r` are the quotient and remainder obtained by dividing `stop - start` by `step`.
 
 ### Example
 
@@ -112,7 +112,7 @@ If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/Java
 
 ### Parameters
 
-`constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be a number or string, or, if the axis has an ordering relation, an object with `start` and `stop` properties whose values are numbers or strings, or an object with a `target` property whose value is a number or string. Properties that have the values `undefined` or `null` are ignored. A number or string constrains the axis to exactly the given value, a start/stop object to the values intersecting the extent, and a target object to the value closest to the given value.
+`constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be a number or string, or, if the axis has an ordering relation, an object with `start` and `stop` properties whose values are numbers or strings, or an object with a `target` property whose value is a number or string. Properties that have the values `undefined` or `null` are ignored. A number or string constrains the axis to exactly the given value, a `start`/`stop` object to the values intersecting the extent, and a `target` object to the value closest to the given value.
 
 ### Example
 
