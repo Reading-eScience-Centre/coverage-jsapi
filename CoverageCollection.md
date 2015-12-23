@@ -19,7 +19,7 @@ Every coverage in the collection has a domain that follows this template, except
 
 ### .query()
 
-Returns a [`CollectionQuery`](CollectionQuery.md) object with which this collection can be filtered, subsetted, etc.
+Returns a [`CoverageCollectionQuery`](CoverageCollectionQuery.md) object with which this collection can be filtered, subsetted, etc.
 
 #### Examples
 
