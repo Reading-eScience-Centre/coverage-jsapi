@@ -112,20 +112,12 @@ If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/Java
 
 ### Parameters
 
-`constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be a number or string, or, if the axis has an ordering relation, an object with `start` and/or `stop` properties whose values are numbers or strings, or an object with a `target` property whose value is a number or string. Properties that have the values `undefined` or `null` are ignored. A number or string constrains the axis to exactly the given value, a `start`/`stop` object to the values intersecting the extent (which may be open at one side), and a `target` object to the value closest to the given value.
+`constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be a number or string, or, if the axis has an ordering relation, an object with `start` and `stop` properties whose values are numbers or strings, or an object with a `target` property whose value is a number or string. Properties that have the values `undefined` or `null` are ignored. A number or string constrains the axis to exactly the given value, a `start`/`stop` object to the values intersecting the extent, and a `target` object to the value closest to the given value.
 
 ### Example
 
 ```js
 cov.subsetByValue({t: '2015-01-01T01:00:00', z: {start: -10, stop: -5} }).then(function(subsetCov) {
-    // work with subsetted coverage
-}
-```
-
-### Example
-
-```js
-cov.subsetByValue({t: {start: '2015-01-01T01:00:00'}).then(function(subsetCov) {
     // work with subsetted coverage
 }
 ```
