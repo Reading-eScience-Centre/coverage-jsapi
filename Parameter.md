@@ -25,4 +25,4 @@ object where each key is a [`Category`](ObservedProperty.md) ID, and each value 
 This property is used to relate categories encoded as numbers in coverage [range values](Range.md) to their actual [`Category`](ObservedProperty.md).
 
 
-Note that a parameter object cannot have both `unit` and `observedProperty.categories`/`categoryEncoding properties.
+Note that a parameter object cannot have both `unit` and `observedProperty.categories`/`categoryEncoding` properties.
