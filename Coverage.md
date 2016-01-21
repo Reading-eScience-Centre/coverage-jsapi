@@ -20,7 +20,7 @@ If defined, an object with members `"box"` and `"srs"` where `"box"` is an array
 
 ### .timeExtent
 
-The time period which this Coverage covers as an array `[start, end]` of [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) objects.
+If defined, the time period which this Coverage covers as an array `[start, end]` of [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) objects.
 
 ### .parameters
 
