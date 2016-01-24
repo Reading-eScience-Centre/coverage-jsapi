@@ -18,4 +18,4 @@ An [array](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global
 
 ### .bounds
 
-If defined, an array of axis value bounds of length `.values.length`. Each bound is a two-element array with lower and upper bound with the same type as the axis values themselves.
+If defined, an array of axis value bounds of length `.values.length`. Each bound is a two-element array with lower and upper bound with the same data type as the axis values themselves.
