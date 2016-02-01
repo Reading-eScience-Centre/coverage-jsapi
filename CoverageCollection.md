@@ -21,7 +21,7 @@ Every coverage in the collection has a domain that follows this template, except
 
 ### .paging
 
-If defined, a [`CoverageCollectionPaging`](CoverageCollectionPaging.md) object, in which case the collection is paged and remaining coverages may be loaded via that object.
+If defined, a [`CoverageCollectionPaging`](CoverageCollectionPaging.md) object, in which case the collection is paged and the current page corresponds to this `CoverageCollection` object. Remaining coverages may be loaded via methods of the [`CoverageCollectionPaging`](CoverageCollectionPaging.md) object.
 
 ## CoverageCollection methods
 
