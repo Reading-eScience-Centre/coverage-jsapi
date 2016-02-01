@@ -6,6 +6,10 @@
 
 An optionally defined URI that serves as common identifier for this coverage collection.
 
+### .coverages
+
+An array of [`Coverage`](Coverage.md) objects.
+
 ### .parameters
 
 If defined, an array of [`Parameter`](Parameter.md) objects. TODO describe invariants
