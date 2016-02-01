@@ -24,3 +24,11 @@ if (coll.paging && coll.paging.next) {
 ### .previous
 
 If defined, an object with a single method `load()` that when called returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which succeeds with a [`CoverageCollection`](CoverageCollection.md) object corresponding to the previous collection page.
+
+### .first
+
+If defined, an object with a single method `load()` that when called returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which succeeds with a [`CoverageCollection`](CoverageCollection.md) object corresponding to the first collection page.
+
+### .last
+
+If defined, an object with a single method `load()` that when called returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object which succeeds with a [`CoverageCollection`](CoverageCollection.md) object corresponding to the last collection page.
