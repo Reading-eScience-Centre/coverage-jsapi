@@ -19,6 +19,10 @@ If defined, an array of [`Parameter`](Parameter.md) objects. TODO describe invar
 If defined, a [`Domain`](Domain.md) object with zero domain values.
 Every coverage in the collection has a domain that follows this template, except for its domain values.
 
+### .paging
+
+If defined, a [`CoverageCollectionPaging`](CoverageCollectionPaging.md) object, in which case the collection is paged and remaining coverages may be loaded via that object.
+
 ## CoverageCollection methods
 
 ### .query()
