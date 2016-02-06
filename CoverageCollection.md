@@ -6,9 +6,9 @@
 
 An optionally defined URI that serves as common identifier for this coverage collection.
 
-### .type
+### .profiles
 
-The collection type is a URI that characterizes the collection further, e.g. http://coveragejson.org/def#VerticalProfileCoverageCollection.
+An array of URIs that characterize the collection further in the sense of [RFC6909](https://www.ietf.org/rfc/rfc6906.txt), e.g. `['http://coveragejson.org/def#TrajectoryCoverageCollection']`.
 
 ### .coverages
 
