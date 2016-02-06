@@ -6,6 +6,10 @@
 
 An optionally defined URI that serves as common identifier for this coverage collection.
 
+### .type
+
+The collection type is a URI that characterizes the collection further, e.g. http://coveragejson.org/def#VerticalProfileCoverageCollection.
+
 ### .coverages
 
 An array of [`Coverage`](Coverage.md) objects.
