@@ -6,13 +6,13 @@
 
 An optionally defined URI that serves as common identifier for this coverage.
 
-### .type
+### .profiles
 
-The coverage type is a URI that describes which concept the coverage represents, e.g. http://www.topografix.com/GPX#Track. It may be used by implementations to choose a more appropriate visualization than by just simply looking at the domain type (e.g. http://coveragejson.org/def#Trajectory)
+An array of URIs that characterize the coverage further in the sense of [RFC6909](https://www.ietf.org/rfc/rfc6906.txt), e.g. `['http://coveragejson.org/def#TrajectoryCoverage']`.
 
-### .domainType
+### .domainProfiles
 
-The domain type of the coverage given as a URI, e.g. http://coveragejson.org/def#Profile. The domain type is typically enough to choose a (possibly generic) implementation for visualization/processing. This property is identical to the [`Domain.type`](Domain.md) property. It allows to make early decisions without actually loading the domain with `.loadDomain()`.
+Shortcut to the [`Domain.profiles`](Domain.md) property. It allows to make early decisions without actually loading the domain with `.loadDomain()`.
 
 ### .bbox
 
@@ -36,7 +36,7 @@ The `loadDomain()` method returns a [`Promise`](https://developer.mozilla.org/de
 
 ```js
 cov.loadDomain().then(function(domain) {
-  console.log(domain.type) // "http://coveragejson.org/def#Grid"
+  console.log(domain.profiles) // ["http://coveragejson.org/def#Grid"]
 })
 ```
 
@@ -92,7 +92,7 @@ function loadRanges (keys) {
 
 ## subsetByIndex(constraints)
 
-If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object succeeding with a copy of this [`Coverage`](Coverage.md) object with the domain subsetted in index space. If this function is not defined, then this operation is not supported. The coverage and/or domain type may be different than in the original coverage.
+If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object succeeding with a copy of this [`Coverage`](Coverage.md) object with the domain subsetted in index space. If this function is not defined, then this operation is not supported. The coverage and/or domain profiles may be different than in the original coverage.
 
 ### Parameters
 
@@ -108,7 +108,7 @@ cov.subsetByIndex({t: 4, z: {start: 10, stop: 20} }).then(function(subsetCov) {
 
 ## subsetByValue(constraints)
 
-If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object succeeding with a copy of this [`Coverage`](Coverage.md) object with the domain subsetted in value space. If this function is not defined, then this operation is not supported. The coverage and/or domain type may be different than in the original coverage. Subsetting in value space is only supported for non-composite axes.
+If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object succeeding with a copy of this [`Coverage`](Coverage.md) object with the domain subsetted in value space. If this function is not defined, then this operation is not supported. The coverage and/or domain profiles may be different than in the original coverage. Subsetting in value space is only supported for non-composite axes.
 
 ### Parameters
 
