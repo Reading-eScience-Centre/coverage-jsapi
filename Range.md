@@ -10,15 +10,15 @@ A [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_
 
 A string identifying the data type of the non-null range values within `.values`. Can be `"float"`, `"integer"`, or `"string"`.
 
-### .validMin
+### .actualMin
 
 If defined, any number in `.values` is equal or greater than `.validMin`.
 
-### .validMax
+### .actualMax
 
 If defined, any number in `.values` is equal or lower than `.validMax`.
 
-If `.values` has only missing values or `.dataType` is `"string"`, then `.validMin` and `.validMax` are not defined, otherwise both exist.
+If `.values` has only missing values or `.dataType` is `"string"`, then `.actualMin` and `.actualMax` are not defined, otherwise both exist.
 
 ## Range methods
 
