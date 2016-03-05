@@ -12,11 +12,11 @@ A string identifying the data type of the non-null range values within `.values`
 
 ### .actualMin
 
-If defined, any number in `.values` is equal or greater than `.validMin`.
+If defined, any number in `.values` is equal or greater than `.actualMin`.
 
 ### .actualMax
 
-If defined, any number in `.values` is equal or lower than `.validMax`.
+If defined, any number in `.values` is equal or lower than `.actualMax`.
 
 If `.values` has only missing values or `.dataType` is `"string"`, then `.actualMin` and `.actualMax` are not defined, otherwise both exist.
 
