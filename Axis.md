@@ -8,9 +8,9 @@ Axis objects describe the values of a single domain axis.
 
 A URI describing the structure of the axis values, e.g. http://coveragejson.org/def#Tuple or http://ld.geojson.org/vocab#Polygon. If undefined, then the axis values are assumed to be primitive (numbers or strings).
 
-### .dimensions
+### .components
 
-An array of dimension identifier strings where the dimension order is defined by the data type. Each axis value can be referenced within the given dimensions using reference systems (see [Domain](Domain.md)). If the axis has only a single dimension, then the dimension identifier is guaranteed to be equal to the axis identifier.
+An array of component identifier strings where the order of components is defined by the data type. Each axis value can be referenced within the given components using reference systems (see [Domain](Domain.md)). If the axis has only a single component, then the component identifier is guaranteed to be equal to the axis identifier.
 
 ### .values
 
