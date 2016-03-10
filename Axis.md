@@ -6,7 +6,7 @@ Axis objects describe the values of a single domain axis.
 
 ### .dataType
 
-A URI describing the structure of the axis values, e.g. http://coveragejson.org/def#Tuple or http://ld.geojson.org/vocab#Polygon. If undefined, then the axis values are assumed to be primitive (numbers or strings).
+A URI describing the structure of the axis values, e.g. http://coveragejson.org/def#Tuple or http://coveragejson.org/def#Polygon. If undefined, then the axis values are assumed to be primitive (numbers or strings).
 
 ### .components
 
