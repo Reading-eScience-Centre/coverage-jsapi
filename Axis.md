@@ -4,6 +4,10 @@ Axis objects describe the values of a single domain axis.
 
 ## Axis properties
 
+### .key
+
+The axis name, identical to the one used as key in [`Domain.axes`](Domain.md#axes).
+
 ### .dataType
 
 A URI describing the structure of the axis values, e.g. http://coveragejson.org/def#Tuple or http://coveragejson.org/def#Polygon. If undefined, then the axis values are assumed to be primitive (numbers or strings).
