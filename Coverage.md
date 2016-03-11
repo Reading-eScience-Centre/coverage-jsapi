@@ -14,14 +14,6 @@ An array of URIs that characterize the coverage further in the sense of [RFC6909
 
 Shortcut to the [`Domain.profiles`](Domain.md) property. It allows to make early decisions without actually loading the domain with `.loadDomain()`.
 
-### .bbox
-
-If defined, an object with members `"box"` and `"srs"` where `"box"` is an array of four coordinates `[minx,miny,maxx,maxy]` describing the horizontal bounding box of the coverage and `"srs"` is a URI of the spatial coordinate reference system used for the coordinates. The value of `"srs"` will in most cases be `http://www.opengis.net/def/crs/OGC/1.3/CRS84` such that the `"box"` array has the values `[west longitude, south latitude, east longitude, north latitude]`.
-
-### .timeExtent
-
-If defined, the time period which this Coverage covers as an array `[start, end]` of [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) objects.
-
 ### .parameters
 
 A [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map) from key to [`Parameter`](Parameter.md) object. The key is a short alias of a Parameter, typically what is called a "variable name" or similar.
