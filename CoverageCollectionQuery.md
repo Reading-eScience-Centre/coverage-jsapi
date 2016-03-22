@@ -6,6 +6,8 @@ A CoverageCollectionQuery object allows to build a query over a coverage collect
 
 ### .filter(constraints)
 
+Filter coverages by domain values. Only those that satisfy the filter constraint are included in the resulting collection.
+
 #### Examples
 
 ```js
@@ -34,12 +36,12 @@ query.subset({
 
 ### .embed(constraints)
 
-
+Only applies when the query is run against a server. Indicates a preference to the server to embed the domain and/or range data of all coverages in a single request. The server may not support or honor the preference. Note that this preference, whether fulfullied or not, has no influence on the JavaScript API.
 
 #### Examples
 
 ```js
-query.embed({ range: true }).execute().then(function(coll) {
+query.embed({ domain: true, range: true }).execute().then(function(coll) {
   // work with collection
 })
 ```
