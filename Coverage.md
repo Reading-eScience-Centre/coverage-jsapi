@@ -70,15 +70,12 @@ cov.loadRanges().then(function(ranges) {
 
 ```js
 function loadRanges (keys) {
-  if (keys === undefined) keys = this.parameters.keys()
-  keys = Array.from(keys)
-  return Promise.all(keys.map(this.loadRange)).then(ranges => {
-    let map = new Map()
-    for (let i=0; i < keys.length; i++) {
-      map.set(keys[i], ranges[i])
-    }
-    return map
-  })
+  if (!keys) {
+    keys = this.parameters.keys()
+  }
+  return Promise.all([...keys].map(this.loadRange)).then(ranges =>
+    new Map(keys.map((key,i) => [key,ranges[i]]))
+  )
 }
 ```
 
