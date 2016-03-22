@@ -36,7 +36,7 @@ query.subset({
 
 ### .embed(constraints)
 
-Only applies when the query is run against a server. Indicates a preference to the server to embed the domain and/or range data of all coverages in a single request. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
+Only applies when the query is run against a server. Indicates a preference to the server to embed the domain and/or range data of all coverages in a single response. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
 
 #### Examples
 
