@@ -34,18 +34,12 @@ query.subset({
 })
 ```
 
-### .eagerload()
-
-Only applies when the query is run against a server. Indicates a preference to the server to return all data of all coverages in a single response, instead of including links for loading further data in an on-demand (lazy) manner. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
-
-#### Examples
-
-```js
-query.eagerload().execute().then(function(coll) {
-  // work with collection
-})
-```
-
-### .execute()
+### .execute([options])
 
 Returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) that succeeds with a [`CoverageCollection`](CoverageCollection.md) object.
+
+#### Parameters
+
+`options` - Optional. An options object.
+
+`options.eagerload` - Optional. Only applies when the query is run against a server. If `true`, indicates a preference to the server to return all data of all coverages in a single response, instead of including links for loading further data in an on-demand (lazy) manner. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
