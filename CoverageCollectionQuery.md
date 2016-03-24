@@ -34,14 +34,14 @@ query.subset({
 })
 ```
 
-### .embed(constraints)
+### .eagerload()
 
-Only applies when the query is run against a server. Indicates a preference to the server to embed the domain and/or range data of all coverages in a single response. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
+Only applies when the query is run against a server. Indicates a preference to the server to return all data of all coverages in a single response, instead of including links for loading further data in an on-demand (lazy) manner. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
 
 #### Examples
 
 ```js
-query.embed({ domain: true, range: true }).execute().then(function(coll) {
+query.eagerload().execute().then(function(coll) {
   // work with collection
 })
 ```
