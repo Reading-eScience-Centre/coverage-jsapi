@@ -89,7 +89,7 @@ If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/Java
 
 `options` - Optional. An options object.
 
-`options.embed` - Optional. An object with members `domain` and/or `range` with value `true`. Only applies when the operation is run against a server. Indicates a preference to the server to embed the domain and/or range data in a single response. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
+`options.eagerload` - Optional. Only applies when the operation is run against a server. If `true`, indicates a preference to the server to return all data in a single response, instead of including links for loading further data in an on-demand (lazy) manner. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
 
 ### Example
 
@@ -102,7 +102,7 @@ cov.subsetByIndex({t: 4, z: {start: 10, stop: 20} }).then(function(subsetCov) {
 ### Example
 
 ```js
-cov.subsetByIndex({t: 4}, {embed: {domain: true, range: true}).then(function(subsetCov) {
+cov.subsetByIndex({t: 4}, {eagerload: true).then(function(subsetCov) {
     // work with subsetted coverage
 }
 ```
@@ -117,7 +117,7 @@ If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/Java
 
 `options` - Optional. An options object.
 
-`options.embed` - Optional. An object with members `domain` and/or `range` with value `true`. Only applies when the operation is run against a server. Indicates a preference to the server to embed the domain and/or range data in a single response. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
+`options.eagerload` - Optional. Only applies when the operation is run against a server. If `true`, indicates a preference to the server to return all data in a single response, instead of including links for loading further data in an on-demand (lazy) manner. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
 
 ### Example
 
