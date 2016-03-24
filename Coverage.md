@@ -79,11 +79,11 @@ function loadRanges (keys) {
 }
 ```
 
-## subsetByIndex(constraints[, options])
+### .subsetByIndex(constraints[, options])
 
 If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object succeeding with a copy of this [`Coverage`](Coverage.md) object with the domain subsetted in index space. If this function is not defined, then this operation is not supported. The coverage and/or domain profiles may be different than in the original coverage.
 
-### Parameters
+#### Parameters
 
 `constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be an integer, or an object with `start`, `stop`, and optionally `step` (defaults to 1) properties whose values are integers. Properties that have the values `undefined` or `null` are ignored. All integers must be non-negative, `step` must not be zero. An integer constrains the axis to the given index, a `start`/`stop`/`step` object to a range of indices: If `step=1`, this includes all indices starting at `start` and ending at `stop` (exclusive); if `step>1`, all indices `start, start + step, ..., start + (q + r - 1) step` where `q` and `r` are the quotient and remainder obtained by dividing `stop - start` by `step`.
 
@@ -91,7 +91,7 @@ If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/Java
 
 `options.eagerload` - Optional. Only applies when the operation is run against a server. If `true`, indicates a preference to the server to return all data in a single response, instead of including links for loading further data in an on-demand (lazy) manner. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
 
-### Example
+#### Example
 
 ```js
 cov.subsetByIndex({t: 4, z: {start: 10, stop: 20} }).then(function(subsetCov) {
@@ -99,7 +99,7 @@ cov.subsetByIndex({t: 4, z: {start: 10, stop: 20} }).then(function(subsetCov) {
 }
 ```
 
-### Example
+#### Example
 
 ```js
 cov.subsetByIndex({t: 4}, {eagerload: true).then(function(subsetCov) {
@@ -107,11 +107,11 @@ cov.subsetByIndex({t: 4}, {eagerload: true).then(function(subsetCov) {
 }
 ```
 
-## subsetByValue(constraints[, options])
+### .subsetByValue(constraints[, options])
 
 If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise) object succeeding with a copy of this [`Coverage`](Coverage.md) object with the domain subsetted in value space. If this function is not defined, then this operation is not supported. The coverage and/or domain profiles may be different than in the original coverage. Subsetting in value space is only supported for non-composite axes.
 
-### Parameters
+#### Parameters
 
 `constraints` - An object which describes the subsetting constraints. Every property of it refers to an axis name as defined in `Domain.names`, and its value must either be a number or string, or, if the axis has an ordering relation, an object with `start` and `stop` properties whose values are numbers or strings, or an object with a `target` property whose value is a number or string. Properties that have the values `undefined` or `null` are ignored. A number or string constrains the axis to exactly the given value, a `start`/`stop` object to the values intersecting the extent, and a `target` object to the value closest to the given value.
 
@@ -119,7 +119,7 @@ If defined, returns a [`Promise`](https://developer.mozilla.org/de/docs/Web/Java
 
 `options.eagerload` - Optional. Only applies when the operation is run against a server. If `true`, indicates a preference to the server to return all data in a single response, instead of including links for loading further data in an on-demand (lazy) manner. The server may not support or honor the preference. Note that this preference, whether fulfilled or not, has no influence on the JavaScript API.
 
-### Example
+#### Example
 
 ```js
 cov.subsetByValue({t: '2015-01-01T01:00:00', z: {start: -10, stop: -5} }).then(function(subsetCov) {
@@ -127,7 +127,7 @@ cov.subsetByValue({t: '2015-01-01T01:00:00', z: {start: -10, stop: -5} }).then(f
 }
 ```
 
-### Example
+#### Example
 
 ```js
 cov.subsetByValue({z: {target: -10} }).then(function(subsetCov) {
