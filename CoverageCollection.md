@@ -43,7 +43,6 @@ collection.query()
   .subset({
     'z': {start: 10, stop: 20}
   })
-  .embed({range: true})
   .execute().then(function(newcollection) {
     console.log(newcollection.coverages.length)
   })
