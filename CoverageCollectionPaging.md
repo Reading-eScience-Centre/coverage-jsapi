@@ -4,7 +4,7 @@
 
 ### .total
 
-The total number of coverages within the paged collection.
+If defined, the total number of coverages within the paged collection.
 
 ### .next
 
