@@ -22,4 +22,12 @@ An [array](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global
 
 ### .bounds
 
-If defined, an array of axis value bounds of length `.values.length`. Each bound is a two-element array with lower and upper bound with the same data type as the axis values themselves.
+If defined, an object with a method `get(i)` that returns a two-element array with lower and upper bound of a given axis index with the same data type as the axis values themselves.
+
+#### Example
+
+```js
+var axis = domain.axes.get('x')
+var val = axis.values[0] // 10
+var bounds = axis.bounds.get(0) // [9,11]
+```
