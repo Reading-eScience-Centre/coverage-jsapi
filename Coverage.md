@@ -18,6 +18,10 @@ Shortcut to the [`Domain.profiles`](Domain.md) property. It allows to make early
 
 A [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map) from key to [`Parameter`](Parameter.md) object. The key is a short alias of a Parameter, typically what is called a "variable name" or similar.
 
+### .loaded
+
+A boolean which indicates whether all coverage data is already loaded in memory. If `true` then this typically means that calls to `.loadDomain()`, `.loadRange()`, `.loadRanges()`, `.subsetByIndex()`, and `.subsetByValue()` will not invoke a network request.
+
 ## Coverage methods
 
 ### .loadDomain()
