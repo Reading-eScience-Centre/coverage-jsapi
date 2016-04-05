@@ -2,6 +2,10 @@
 
 ## Coverage properties
 
+### .type
+
+The constant `"Coverage"`.
+
 ### .id
 
 An optionally defined URI that serves as common identifier for this coverage.
