@@ -2,6 +2,10 @@
 
 ## CoverageCollection properties
 
+### .type
+
+The constant `"CoverageCollection"`.
+
 ### .id
 
 An optionally defined URI that serves as common identifier for this coverage collection.
