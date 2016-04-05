@@ -6,6 +6,10 @@ This allows for Coverage formats and implementations to evolve naturally and pre
 
 ## Domain properties
 
+### .type
+
+The constant `"Domain"`.
+
 ### .profiles
 
 An array of URIs that characterize the domain further in the sense of [RFC6909](https://www.ietf.org/rfc/rfc6906.txt), e.g. `['http://coveragejson.org/def#Grid']`.
