@@ -16,7 +16,7 @@ An [`ObservedProperty`](ObservedProperty.md) object.
 
 ### .unit
 
-An optionally defined object with the properties `symbol` and optionally `label`. `symbol` is an object with `value` and optionally `type` where both are strings with `value` the unit string, for example `"°C"`, and `type` a URI identifying the coding scheme, for example `"http://www.opengis.net/def/uom/UCUM/"`. `label` is a [`LanguageMap`](LanguageMap.md) object, for example `{en: "Degrees Celsius"}`. If the `unit` property is not defined, then the parameter values are unitless.
+An optionally defined object with the properties `symbol` and optionally `label`. `symbol` is an object with the properties `value` and optionally `type` where both are strings with `value` the unit string, for example `"°C"`, and `type` a URI identifying the coding scheme, for example `"http://www.opengis.net/def/uom/UCUM/"`. `label` is a [`LanguageMap`](LanguageMap.md) object, for example `{en: "Degrees Celsius"}`. If the `unit` property is not defined, then the parameter values are unitless.
 
 ### .categoryEncoding
 
