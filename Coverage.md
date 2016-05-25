@@ -10,13 +10,9 @@ The constant `"Coverage"`.
 
 An optionally defined URI that serves as common identifier for this coverage.
 
-### .profiles
+### .domainType
 
-An array of URIs that characterize the coverage further in the sense of [RFC6909](https://www.ietf.org/rfc/rfc6906.txt), e.g. `['http://coveragejson.org/def#TrajectoryCoverage']`.
-
-### .domainProfiles
-
-Shortcut to the [`Domain.profiles`](Domain.md) property. It allows to make early decisions without actually loading the domain with `.loadDomain()`.
+If defined, then the coverage has a domain that follows the given domain type, e.g. `'http://covjson.org/def#Trajectory'`.
 
 ### .parameters
 
