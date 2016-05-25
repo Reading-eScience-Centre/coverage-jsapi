@@ -10,9 +10,9 @@ The constant `"CoverageCollection"`.
 
 An optionally defined URI that serves as common identifier for this coverage collection.
 
-### .profiles
+### .domainType
 
-An array of URIs that characterize the collection further in the sense of [RFC6909](https://www.ietf.org/rfc/rfc6906.txt), e.g. `['http://coveragejson.org/def#TrajectoryCoverageCollection']`.
+If defined, every coverage in the collection has the given domain type. This is typically a URI.
 
 ### .coverages
 
@@ -21,11 +21,6 @@ An array of [`Coverage`](Coverage.md) objects.
 ### .parameters
 
 If defined, an array of [`Parameter`](Parameter.md) objects. TODO describe invariants
-
-### .domainTemplate
-
-If defined, a [`Domain`](Domain.md) object with zero domain values.
-Every coverage in the collection has a domain that follows this template, except for its domain values.
 
 ### .paging
 
