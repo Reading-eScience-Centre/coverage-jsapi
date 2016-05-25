@@ -10,9 +10,9 @@ This allows for Coverage formats and implementations to evolve naturally and pre
 
 The constant `"Domain"`.
 
-### .profiles
+### .domainType
 
-An array of URIs that characterize the domain further in the sense of [RFC6909](https://www.ietf.org/rfc/rfc6906.txt), e.g. `['http://coveragejson.org/def#Grid']`.
+If defined, then the domaint follows the given domain type, e.g. `'http://covjson.org/def#Trajectory'`.
 
 ### .axes
 
