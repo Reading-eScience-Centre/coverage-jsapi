@@ -12,7 +12,7 @@ An optionally defined URI that serves as common identifier for this coverage.
 
 ### .domainType
 
-If defined, then the coverage has a domain that follows the given domain type, e.g. `'http://covjson.org/def#Trajectory'`.
+If defined, then the coverage has a domain that follows the given domain type, e.g. `'http://covjson.org/def/domainTypes#Trajectory'`.
 
 ### .parameters
 
