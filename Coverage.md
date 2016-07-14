@@ -50,7 +50,7 @@ The `loadRange` method returns a [`Promise`](https://developer.mozilla.org/de/do
 var paramKey = 'salinity'
 cov.loadRange(paramKey).then(function(range) {
   console.log(range.validMin, range.validMax)
-  console.log(range.values)
+  console.log(range.get({x: 0, y: 2, t:0}))
 })
 ```
 
