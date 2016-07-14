@@ -66,7 +66,7 @@ The `loadRanges` method returns a [`Promise`](https://developer.mozilla.org/de/d
 
 ```js
 cov.loadRanges().then(function(ranges) {
-  console.log(ranges.get('salinity').values)
+  console.log(ranges.get('salinity').get({x: 0, y: 2, t:0}))
 })
 ```
 
