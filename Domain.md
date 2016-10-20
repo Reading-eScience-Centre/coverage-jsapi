@@ -20,4 +20,4 @@ A [`Map`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_
 
 ### .referencing
 
-An array of objects associating components to reference systems. Each object has a `"components"` property and a `"system"` property. The `"components"` property lists the identifiers of the components for which the reference system applies (in correct order if relevant), while the `"system"` property is a reference system object. For now, reference system objects are exactly as defined in the [CoverageJSON](https://github.com/Reading-eScience-Centre/coveragejson/blob/master/spec.md#5-reference-system-objects) format.
+An array of objects associating components to reference systems. Each object has a `"coordinates"` property and a `"system"` property. The `"coordinates"` property lists the identifiers of the coordinates for which the reference system applies (in correct order if relevant), while the `"system"` property is a reference system object. For now, reference system objects are exactly as defined in the [CoverageJSON](https://covjson.org/spec/#reference-system-objects) format.
