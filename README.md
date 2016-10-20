@@ -7,7 +7,6 @@ Start here: [`Coverage` objects](Coverage.md) or [`CoverageCollection` objects](
 ## Implementations
 
 - [covjson-reader](https://github.com/Reading-eScience-Centre/covjson-reader) - Library that reads CoverageJSON documents, exposing the data as [`Domain`](Domain.md), [`Coverage`](Coverage.md), or [`CoverageCollection`](CoverageCollection.md) objects
-- [coverage-rest-client](https://github.com/Reading-eScience-Centre/coverage-rest-client) - Library that wraps [`Coverage`](Coverage.md) and [`CoverageCollection`](CoverageCollection.md) objects and runs operations like subsetting server-side
 - [leaflet-coverage](https://github.com/Reading-eScience-Centre/leaflet-coverage) - [Leaflet](http://leafletjs.com/) plugin that visualizes [`Domain`](Domain.md), [`Coverage`](Coverage.md), and [`CoverageCollection`](CoverageCollection.md) objects on a map
 
 ## Acknowledgments
