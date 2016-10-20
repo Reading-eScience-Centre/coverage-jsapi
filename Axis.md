@@ -10,11 +10,11 @@ The axis name, identical to the one used as key in [`Domain.axes`](Domain.md#axe
 
 ### .dataType
 
-A URI describing the structure of the axis values, e.g. http://coveragejson.org/def#Tuple or http://coveragejson.org/def#Polygon. If undefined, then the axis values are assumed to be primitive (numbers or strings).
+A URI describing the structure of the axis values, e.g. https://covjson.org/def/core#tuple or https://covjson.org/def/core#polygon. If undefined, then the axis values are assumed to be primitive (numbers or strings).
 
-### .components
+### .coordinates
 
-An array of component identifier strings where the order of components is defined by the data type. Each axis value can be referenced within the given components using reference systems (see [Domain](Domain.md)). If the axis has only a single component, then the component identifier is guaranteed to be equal to the axis identifier.
+An array of coordinate identifier strings where the order of coordinates is defined by the data type. Each axis value can be referenced within the given coordinates using reference systems (see [Domain](Domain.md)). If the axis has only a single coordinate identifier, then the identifier is guaranteed to be equal to the axis identifier.
 
 ### .values
 
