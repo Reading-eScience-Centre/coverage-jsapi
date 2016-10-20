@@ -12,7 +12,7 @@ The constant `"Domain"`.
 
 ### .domainType
 
-If defined, then the domaint follows the given domain type, e.g. `'http://covjson.org/def#Trajectory'`.
+If defined, then the domain follows the given domain type, e.g. `'https://covjson.org/def/domainTypes#Trajectory'`.
 
 ### .axes
 
