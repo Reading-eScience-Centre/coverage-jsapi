@@ -12,7 +12,7 @@ An optionally defined URI that serves as common identifier for this coverage.
 
 ### .domainType
 
-If defined, then the coverage has a domain that follows the given domain type, e.g. `'http://covjson.org/def/domainTypes#Trajectory'`.
+If defined, then the coverage has a domain that follows the given domain type, e.g. `https://covjson.org/def/domainTypes#Trajectory`.
 
 ### .parameters
 
@@ -32,7 +32,7 @@ The `loadDomain()` method returns a [`Promise`](https://developer.mozilla.org/de
 
 ```js
 cov.loadDomain().then(function(domain) {
-  console.log(domain.domainType) // ["http://covjson.org/def#Grid"]
+  console.log(domain.domainType) // "https://covjson.org/def/domainTypes#Grid"
 })
 ```
 
